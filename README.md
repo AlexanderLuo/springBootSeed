@@ -1,2 +1,2 @@
 # springBootSeed
-seed
+    Just seet
