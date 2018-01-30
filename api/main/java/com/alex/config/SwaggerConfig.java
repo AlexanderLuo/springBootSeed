@@ -25,7 +25,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .select()
                 // 指定controller存放的目录路径
-                .apis(RequestHandlerSelectors.basePackage("com.digag.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.alex"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -33,7 +33,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 // 文档标题
-                .title("DigAg")
+                .title("广告")
                 // 文档描述
                 .description("https://github.com/AlexanderLuo")
                 .termsOfServiceUrl("https://github.com/AlexanderLuo")
