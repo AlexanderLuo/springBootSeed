@@ -1,2 +1,0 @@
-# springBootSeed
-    Just seet
