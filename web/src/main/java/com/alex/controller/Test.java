@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Test {
     @Autowired
+
     IOriSqlService iUserService;
 
     @GetMapping(value = "/hi")
