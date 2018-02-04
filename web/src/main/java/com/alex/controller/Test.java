@@ -1,6 +1,7 @@
 package com.alex.controller;
 
 
+import com.alex.entity.User;
 import com.alex.service.IOriSqlService;
 import com.alex.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class Test {
 
     @GetMapping(value = "/hi")
     public Object hi(){
+        User user=new User();
+
         return iUserService.selectDemo();
     }
 

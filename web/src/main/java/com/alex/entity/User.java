@@ -1,5 +1,4 @@
 package com.alex.entity;
-import lombok.Data;
 
 /**
  * Description:
@@ -8,7 +7,7 @@ import lombok.Data;
  * Time: 17:49
  */
 
-@Data
+
 public class User {
     private String userId;
     private String account;
