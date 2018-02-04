@@ -1,8 +1,6 @@
 package com.alex.entity;
 
-import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
-
 import java.io.Serializable;
 
 /**
@@ -13,7 +11,9 @@ import java.io.Serializable;
  */
 
 
-public class User extends Model<User> {
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @TableId
     private String userId;
     private String account;
@@ -52,8 +52,5 @@ public class User extends Model<User> {
         this.password = password;
     }
 
-    @Override
-    protected Serializable pkVal() {
-        return this.userId;
-    }
+
 }
