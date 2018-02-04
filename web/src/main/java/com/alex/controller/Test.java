@@ -2,6 +2,7 @@ package com.alex.controller;
 
 
 import com.alex.service.IOriSqlService;
+import com.alex.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,12 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Test {
     @Autowired
+    IOriSqlService iOriSqlService;
+    @Autowired
+    IUserService iUserService;
 
-    IOriSqlService iUserService;
 
     @GetMapping(value = "/hi")
     public Object hi(){
-        return iUserService.test();
+        return iUserService.selectDemo();
+    }
+
+    @GetMapping(value = "/ok")
+    public Object ok(){
+        return iUserService.selectDemo();
     }
 
 }

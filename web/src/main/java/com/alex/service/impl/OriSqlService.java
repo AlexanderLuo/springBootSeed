@@ -1,6 +1,6 @@
 package com.alex.service.impl;
 
-import com.alex.mapper.OriSqlMapper;
+import com.alex.dao.OriSqlMapper;
 import com.alex.service.IOriSqlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
