@@ -1,12 +1,12 @@
 package com.alex.dao;
 
 import com.alex.entity.User;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
 
-    User selectDemo();
 
 
 }

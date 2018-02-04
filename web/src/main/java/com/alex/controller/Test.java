@@ -4,9 +4,13 @@ package com.alex.controller;
 import com.alex.entity.User;
 import com.alex.service.IOriSqlService;
 import com.alex.service.IUserService;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Collections;
 
 /**
  * Description:
@@ -24,14 +28,20 @@ public class Test {
 
     @GetMapping(value = "/hi")
     public Object hi(){
-        User user=new User();
 
-        return iUserService.selectDemo();
+        return iUserService.selectPage(
+                new Page<User>(0, 10),
+                new EntityWrapper<User>().orderBy("userName",false)
+        );
     }
 
     @GetMapping(value = "/ok")
-    public Object ok(){
-        return iUserService.selectDemo();
+    public void ok(){
+        User user =new User();
+        user.setUserName("luohao");
+        iUserService.insert(user);
     }
+
+
 
 }

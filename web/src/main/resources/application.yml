@@ -13,12 +13,22 @@ spring:
         driver-class-name: com.mysql.jdbc.Driver
 
 
-mybatis:
+mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.alex.entity
 
   configuration:
     map-underscore-to-camel-case: true  #驼峰转换
     cache-enabled: false
+
+  global-config:
+    id-type: 3
+    refresh-mapper: true
+
+
+
+
+
+
 
 
