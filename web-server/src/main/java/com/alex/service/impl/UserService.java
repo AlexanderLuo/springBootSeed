@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService extends ServiceImpl<UserMapper, User> implements IUserService{
+    @Autowired
+    UserMapper userMapper;
 
 
     @Override
